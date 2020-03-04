@@ -1,0 +1,35 @@
+{
+  "name": "@sitegeist/conventional",
+  "version": "1.0.0",
+  "description": "Frontend toolchain for sitegeist TYPO3 projects",
+  "keywords": [],
+  "license": "MIT",
+  "author": "Simon Praetorius <praetorius@sitegeist.de>",
+  "contributors": [
+    "Lukas Gurschler <gurschler@sitegeist.de>",
+    "Lennart Järvinen <jaervinen@sitegeist.de>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sitegeist/conventional.git"
+  },
+  "homepage": "https://github.com/sitegeist/conventional#readme",
+  "bugs": "https://github.com/sitegeist/conventional/issues",
+  "main": "src/conventional.js",
+  "bin": "bin/conventional-cli.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@babel/core": "^7.8.6",
+    "@babel/preset-env": "^7.8.6",
+    "babel-loader": "^8.0.6",
+    "core-js": "3",
+    "json5": "^2.1.1",
+    "node-sass": "^4.13.1",
+    "webpack": "^4.42.0"
+  },
+  "devDependencies": {
+    "node": "^12"
+  }
+}
