@@ -1,0 +1,29 @@
+{
+    "minify": true,
+    "sourceMaps": true,
+    "prefixOutputFile": "./Resources/Public/Css/All.prefix.json",
+    "css": [
+        {
+            "inputFile": "./Resources/Private/Styles/Main.scss",
+            "outputFile": "./Resources/Public/Css/Main.min.css"
+        },
+        {
+            "inputFile": "./Resources/Private/Styles/Additional.scss",
+            "outputFile": "./Resources/Public/Css/Additional.min.css"
+        }
+    ],
+    "js": {
+        "inputFiles": {
+            "Main": "./test/Resources/Private/JavaScript/Main.js",
+            "Additional": "./test/Resources/Private/JavaScript/Additional.js"
+        },
+        "outputPath": "./test/Resources/Public/JavaScript/",
+        "outputFilePattern": "[name].min.js"
+    },
+    "svg": [
+        {
+            "inputFiles": "./Resources/Private/Svg/*.svg",
+            "outputFile": "./Resources/Public/Images/Sprite.svg"
+        }
+    ]
+}
