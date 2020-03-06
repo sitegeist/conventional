@@ -1,5 +1,13 @@
 # @sitegeist/conventional
 
+---
+
+TODO
+
+* Source Maps testen (z. B. Zusammenspiel mit Autoprefixer)
+
+---
+
 Frontend toolchain for sitegeist TYPO3 projects
 
 ## Features
@@ -8,7 +16,9 @@ Frontend toolchain for sitegeist TYPO3 projects
 * Enables centralized design tokens in a json/json5 file which can be used in sass files,
  javascript as well as TYPO3 and fluid components
 * Easy imports of multiple sass/js files via glob
-* Autoprefixing (similar to CSS modules) for selected sass files
+* Autoprefixing of CSS classes (similar to CSS modules) for selected sass files
+* Autoprefixing of new CSS properties for older browsers (respects browserslist of project)
+* Automatic polyfills for new JavaScript features with babel (respects browserslist of project)
 * Builds SVG sprites from folders of individual svg files
 * Minifies frontend assets and generates source map files
 
@@ -23,7 +33,7 @@ npx @sitegeist/conventional init
 * Creates `package.json` (if it already exists, it provides instructions to change it => https://www.npmjs.com/package/diff)
    * requires conventional
    * registers commands (build, watch...)
-* Creates `webpack.config.js` (if it already exists, it provides instructions to change it => https://www.npmjs.com/package/diff)
+* Optionally creates `webpack.config.js` (if it already exists, it provides instructions to change it => https://www.npmjs.com/package/diff)
    * reads input/output and settings from conventional configuration file
    * provides method to obtain current prefix
 
@@ -44,55 +54,39 @@ https://github.com/npm/init-package-json
 }
 ```
 
-### webpack.config.js
-
-```js
-import conventionalConfig from ('.conventional.config.json');
-
-module.exports = {
-   entry: {
-       // Read input/output pairs from conventional configuration
-       ...conventionalConfig.js.map(config => { import: config.inputFile, filename: config.outputFile })
-   },
-   // ...
-};
-```
-
 ## Configuration
 
 .conventional.config.json
 
 ```json
 {
-   "minify": true,
-   "sourceMaps": true,
-   "prefixOutputFile": "./Resources/Public/Css/All.prefix.json",
-   "css": [
-       {
-           "inputFile": "./Resources/Private/Styles/Main.scss",
-           "outputFile": "./Resources/Public/Css/Main.min.css"
-       },
-       {
-           "inputFile": "./Resources/Private/Styles/Additional.scss",
-           "outputFile": "./Resources/Public/Css/Additional.min.css"
-       }
-   ],
-   "js": [
-       {
-           "inputFile": "./Resources/Private/JavaScript/Main.js",
-           "outputFile": "./Resources/Public/JavaScript/Main.min.js"
-       },
-       {
-           "inputFile": "./Resources/Private/JavaScript/Additional.js",
-           "outputFile": "./Resources/Public/JavaScript/Additional.min.js"
-       }
-   ],
-   "svg": [
-       {
-           "inputFiles": "./Resources/Private/Svg/*.svg",
-           "outputFile": "./Resources/Public/Images/Sprite.svg"
-       }
-   ]
+    "minify": true,
+    "sourceMaps": true,
+    "prefixOutputFile": "./Resources/Public/Css/All.prefix.json",
+    "css": [
+        {
+            "inputFile": "./Resources/Private/Styles/Main.scss",
+            "outputFile": "./Resources/Public/Css/Main.min.css"
+        },
+        {
+            "inputFile": "./Resources/Private/Styles/Additional.scss",
+            "outputFile": "./Resources/Public/Css/Additional.min.css"
+        }
+    ],
+    "js": {
+        "inputFiles": {
+            "Main": "./Resources/Private/JavaScript/Main.js",
+            "Additional": "./Resources/Private/JavaScript/Additional.js"
+        },
+        "outputPath": "./Resources/Public/JavaScript/",
+        "outputFilePattern": "[name].min.js"
+    },
+    "svg": [
+        {
+            "inputFiles": "./Resources/Private/Svg/*.svg",
+            "outputFile": "./Resources/Public/Images/Sprite.svg"
+        }
+    ]
 }
 ```
 
