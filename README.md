@@ -1,12 +1,6 @@
+**Note: This is currently work in progress.**
+
 # @sitegeist/conventional
-
----
-
-TODO
-
-* Source Maps testen (z. B. Zusammenspiel mit Autoprefixer)
-
----
 
 Frontend toolchain for sitegeist TYPO3 projects
 
@@ -49,7 +43,7 @@ https://github.com/npm/init-package-json
        "lint": "conventional lint"
    },
    "devDependencies": {
-       "@sitegeist/conventional"
+       "@sitegeist/conventional": "^1.0"
    }
 }
 ```
