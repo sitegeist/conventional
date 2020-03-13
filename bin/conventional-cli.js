@@ -10,12 +10,16 @@ if (!fs.existsSync(workingDir) || !fs.lstatSync(workingDir).isDirectory()) {
     process.exit();
 }
 
-if (!['help', 'init', 'build', 'watch', 'lint'].includes(command[0])) {
+if (!['help', 'init', 'build', 'watch', 'lint', 'browsertest'].includes(command[0])) {
     console.error(`ERROR: Invalid command ${command[0]}`);
     process.exit();
 }
 
 console.log(`Working Directory: ${workingDir}`);
+
+console.log(`Reading environment ...`);
+require('dotenv').config({ path: path.resolve(workingDir, '.env') })
+
 console.log(`Executing command: ${command} ...`);
 
 const configFile = path.resolve(workingDir, '.conventional.config.json');

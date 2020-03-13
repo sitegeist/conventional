@@ -24,7 +24,9 @@
     "@babel/core": "^7.8.6",
     "@babel/preset-env": "^7.8.6",
     "babel-loader": "^8.0.6",
+    "cbt_tunnels": "^1.2.2",
     "core-js": "3",
+    "dotenv": "^8.2.0",
     "json5": "^2.1.1",
     "node-sass": "^4.13.1",
     "webpack": "^4.42.0"
