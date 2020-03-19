@@ -1,0 +1,30 @@
+{
+  "minify": true,
+  "sourceMaps": true,
+  "prefixSalt": "sitegeist",
+  "prefixOutputFile": "./Resources/Public/css/All.prefix.json",
+  "css": [
+    {
+      "inputFile": "./Resources/Private/scss/Main.scss",
+      "outputFile": "./Resources/Public/css/Main.min.css"
+    },
+    {
+      "inputFile": "./Resources/Private/scss/Additional.scss",
+      "outputFile": "./Resources/Public/css/Additional.min.css"
+    }
+  ],
+  "js": {
+    "inputFiles": {
+      "Main": "./Resources/Private/JavaScript/Main.js",
+      "Additional": "./Resources/Private/JavaScript/Additional.js"
+    },
+    "outputPath": "./Resources/Public/JavaScript/",
+    "outputFilePattern": "[name].min.js"
+  },
+  "svg": [
+    {
+      "inputFiles": "./Resources/Private/Svg/*.svg",
+      "outputFile": "./Resources/Public/Images/Sprite.svg"
+    }
+  ]
+}
