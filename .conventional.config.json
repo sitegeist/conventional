@@ -3,6 +3,7 @@
   "sourceMaps": true,
   "prefixSalt": "sitegeist",
   "prefixOutputFile": "./Resources/Public/css/All.prefix.json",
+  "scssWatchDir": "./Resources/Private",
   "css": [
     {
       "inputFile": "./Resources/Private/scss/Main.scss",
