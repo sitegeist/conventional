@@ -54,34 +54,39 @@ https://github.com/npm/init-package-json
 
 ```json
 {
-    "minify": true,
-    "sourceMaps": true,
-    "prefixOutputFile": "./Resources/Public/Css/All.prefix.json",
-    "css": [
-        {
-            "inputFile": "./Resources/Private/Styles/Main.scss",
-            "outputFile": "./Resources/Public/Css/Main.min.css"
-        },
-        {
-            "inputFile": "./Resources/Private/Styles/Additional.scss",
-            "outputFile": "./Resources/Public/Css/Additional.min.css"
-        }
-    ],
-    "js": {
-        "inputFiles": {
-            "Main": "./Resources/Private/JavaScript/Main.js",
-            "Additional": "./Resources/Private/JavaScript/Additional.js"
-        },
-        "outputPath": "./Resources/Public/JavaScript/",
-        "outputFilePattern": "[name].min.js"
+  "sourceMaps": true,
+  "prefixSalt": "sitegeist",
+  "prefixOutputFile": "./Resources/Public/css/All.prefix.json",
+  "scssWatchDir": "./Resources/Private",
+  "css": [
+    {
+      "outputStyle": "compressed", 
+      "inputFile": "./Resources/Private/scss/Main.scss",
+      "outputFile": "./Resources/Public/css/Main.min.css"
     },
-    "svg": [
-        {
-            "inputFiles": "./Resources/Private/Svg/*.svg",
-            "outputFile": "./Resources/Public/Images/Sprite.svg"
-        }
-    ]
+    {
+      "outputStyle": "nested",
+      "inputFile": "./Resources/Private/scss/Additional.scss",
+      "outputFile": "./Resources/Public/css/Additional.min.css"
+    }
+  ],
+  "js": {
+    "minify": true,
+    "inputFiles": {
+      "Main": "./Resources/Private/JavaScript/Main.js",
+      "Additional": "./Resources/Private/JavaScript/Additional.js"
+    },
+    "outputPath": "./Resources/Public/JavaScript/",
+    "outputFilePattern": "[name].min.js"
+  },
+  "svg": [
+    {
+      "inputFiles": "./Resources/Private/Svg/*.svg",
+      "outputFile": "./Resources/Public/Images/Sprite.svg"
+    }
+  ]
 }
+
 ```
 
 ## Available Commands
