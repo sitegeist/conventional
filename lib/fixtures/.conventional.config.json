@@ -1,20 +1,22 @@
 {
-  "minify": true,
-  "sourceMaps": true,
+  "sourceMaps": false,
   "prefixSalt": "sitegeist",
   "prefixOutputFile": "./Resources/Public/css/All.prefix.json",
   "scssWatchDir": "./Resources/Private",
   "css": [
     {
+      "outputStyle": "compressed",
       "inputFile": "./Resources/Private/scss/Main.scss",
       "outputFile": "./Resources/Public/css/Main.min.css"
     },
     {
+      "outputStyle": "nested",
       "inputFile": "./Resources/Private/scss/Additional.scss",
       "outputFile": "./Resources/Public/css/Additional.min.css"
     }
   ],
   "js": {
+    "minify": true,
     "inputFiles": {
       "Main": "./Resources/Private/JavaScript/Main.js",
       "Additional": "./Resources/Private/JavaScript/Additional.js"
