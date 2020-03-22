@@ -1,0 +1,19 @@
+{
+  "name": "",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "license": "MIT",
+  "author": "",
+  "contributors": [
+    "Max Mustermann <mustermann@mustermann.de>"
+  ],
+  "scripts": {
+    "build": "conventional build",
+    "watch": "conventional watch",
+    "lint": "conventional lint"
+  },
+  "devDependencies": {
+    "@sitegeist/conventional": "^1.0"
+  }
+}
