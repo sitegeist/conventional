@@ -6,7 +6,7 @@
   "license": "MIT",
   "author": "Simon Praetorius <praetorius@sitegeist.de>",
   "contributors": [
-    "Lukas Gurschler <gurschler@sitegeist.de>",
+    "Clemens Kauczor <kauczor@sitegeist.de>",
     "Lennart Järvinen <jaervinen@sitegeist.de>"
   ],
   "repository": {
@@ -28,10 +28,17 @@
     "core-js": "3",
     "dotenv": "^8.2.0",
     "json5": "^2.1.1",
-    "node-sass": "^4.13.1",
-    "webpack": "^4.42.0"
+    "node-sass": "^6.0.0",
+    "node-sass-glob-importer": "^5.3.2",
+    "node-sass-json-importer": "git+ssh://git@github.com:sitegeist/node-sass-json-importer.git#dev",
+    "node-sass-magic-importer": "^5.3.2",
+    "webpack": "^5"
   },
   "devDependencies": {
-    "node": "^12"
+    "css-loader": "^5.2.0",
+    "mini-css-extract-plugin": "^1.4.1",
+    "node": "^12",
+    "sass-loader": "^11.0.1",
+    "style-loader": "^2.0.0"
   }
 }
