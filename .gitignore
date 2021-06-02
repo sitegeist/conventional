@@ -3,3 +3,5 @@ node_modules
 *.min.js
 *.min.css
 *.map
+/.env
+/tunnel.log
