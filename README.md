@@ -56,17 +56,14 @@ https://github.com/npm/init-package-json
 {
     "minify": true,
     "sourceMaps": true,
-    "prefixOutputFile": "./Resources/Public/Css/All.prefix.json",
-    "css": [
-        {
-            "inputFile": "./Resources/Private/Styles/Main.scss",
-            "outputFile": "./Resources/Public/Css/Main.min.css"
+    "sass": {
+        "inputFiles": {
+            "Main": "./Resources/Private/Sass/Main.scss",
+            "Additional": "./Resources/Private/Sass/Additional.scss"
         },
-        {
-            "inputFile": "./Resources/Private/Styles/Additional.scss",
-            "outputFile": "./Resources/Public/Css/Additional.min.css"
-        }
-    ],
+        "outputPath": "./Resources/Public/Css/",
+        "outputFilePattern": "[name].min.css"
+    },
     "js": {
         "inputFiles": {
             "Main": "./Resources/Private/JavaScript/Main.js",
@@ -74,13 +71,7 @@ https://github.com/npm/init-package-json
         },
         "outputPath": "./Resources/Public/JavaScript/",
         "outputFilePattern": "[name].min.js"
-    },
-    "svg": [
-        {
-            "inputFiles": "./Resources/Private/Svg/*.svg",
-            "outputFile": "./Resources/Public/Images/Sprite.svg"
-        }
-    ]
+    }
 }
 ```
 
