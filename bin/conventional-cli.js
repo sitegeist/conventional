@@ -2,42 +2,39 @@
 const path = require('path')
 const fs = require('fs')
 
+// Read command parameter
 const command = (process.argv[2]) ? process.argv[2].split(':') : ['help']
-/* this can be done better: */
-if (command[1] === 'production') {
-  command[1] = undefined
-  command[2] = 'production'
-} else if (!command[2]) {
-  command[2] = 'development'
+let action = command[0]
+let type = command[1] || null;
+let mode = command[2] || 'development';
+
+// Support shortcuts like build:production, watch:development
+if (['production', 'development'].includes(type)) {
+  type = null
+  mode = command[1]
 }
 
+if (!['help', 'init', 'build', 'watch', 'lint', 'browsertest'].includes(action)) {
+  console.error(`ERROR: Invalid command ${action}`)
+  process.exit(1)
+}
+
+// Determine working directory
 const workingDir = (process.argv[3]) ? path.resolve(process.argv[3]) : process.cwd()
 
 if (!fs.existsSync(workingDir) || !fs.lstatSync(workingDir).isDirectory()) {
   console.error('ERROR: The specified path does not exist or is not a directory.')
-  process.exit()
+  process.exit(1)
 }
 
-if (!['help', 'init', 'build', 'watch', 'lint', 'browsertest'].includes(command[0])) {
-  console.error(`ERROR: Invalid command ${command[0]}`)
-  process.exit()
-}
+// Fetch .env file
+require('dotenv').config({ path: path.resolve(workingDir, '.env') })
 
-// console.log(`Working Directory: ${workingDir}`);
-
-console.log('Reading environment ...')
-// require('dotenv').config({ path: path.resolve(workingDir, '.env') }) -> not working when linked? worked when normally installed
-
-console.log(`Executing command: ${command} ...`)
-
+// Read config file
 const configFile = path.resolve(workingDir, 'conventional.config.json')
-
 const conventionalConfig = (fs.existsSync(configFile)) ? require(configFile) : {}
 
-// const commandFunc = require('./commands/' + command[0])
-// commandFunc(command, workingDir, conventionalConfig)
-
+// Execute command
+console.log(`Executing command: ${command.join(':')} ...`)
 const conventionalFunc = require('../lib/conventional')
-conventionalFunc({ action: command[0], type: command[1], mode: command[2] }, workingDir, conventionalConfig)
-
-// process.exit();
+conventionalFunc(action, type, mode, workingDir, conventionalConfig)

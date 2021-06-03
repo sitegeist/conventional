@@ -3399,9 +3399,9 @@ node-sass-glob-importer@^5.3.2:
   dependencies:
     node-sass-magic-importer "^5.3.2"
 
-"node-sass-json-importer@git+ssh://git@github.com:sitegeist/node-sass-json-importer.git#dev":
+"node-sass-json-importer@git+https://github.com/sitegeist/node-sass-json-importer.git#dev":
   version "0.0.0-development"
-  resolved "git+ssh://git@github.com:sitegeist/node-sass-json-importer.git#c442f55d1b34f874304e467b34422eef3875a4c1"
+  resolved "git+https://github.com/sitegeist/node-sass-json-importer.git#f0dcd50d72102e9f4d5830b5bdf60c7b9a374ee2"
   dependencies:
     is-there "^4.4.4"
     json5 "^2.1.1"

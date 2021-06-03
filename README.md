@@ -1,5 +1,3 @@
-**Note: This is currently work in progress.**
-
 # @sitegeist/conventional
 
 Frontend toolchain for sitegeist TYPO3 projects
@@ -10,11 +8,14 @@ Frontend toolchain for sitegeist TYPO3 projects
 * Enables centralized design tokens in a json/json5 file which can be used in sass files,
  javascript as well as TYPO3 and fluid components
 * Easy imports of multiple sass/js files via glob
-* Autoprefixing of CSS classes (similar to CSS modules) for selected sass files
 * Autoprefixing of new CSS properties for older browsers (respects browserslist of project)
 * Automatic polyfills for new JavaScript features with babel (respects browserslist of project)
-* Builds SVG sprites from folders of individual svg files
 * Minifies frontend assets and generates source map files
+
+### Planned features
+
+* Autoprefixing of CSS classes (similar to CSS modules) for selected sass files
+* Builds SVG sprites from folders of individual svg files
 
 ## Usage
 
@@ -81,24 +82,21 @@ https://github.com/npm/init-package-json
 conventional init
 
 conventional build
-conventional build:css
+conventional build:sass
 conventional build:js
-conventional build:svg
 
 conventional watch
-conventional watch:css
+conventional watch:sass
 conventional watch:js
-conventional watch:svg
+```
 
+### Planned commands
+
+```
 conventional lint
-conventional lint:css
+conventional lint:sass
 conventional lint:js
-conventional lint:svg
-```
 
-Maybe later:
-
-```
 conventional test
 conventional test:css
 conventional test:js
