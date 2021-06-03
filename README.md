@@ -51,7 +51,7 @@ https://github.com/npm/init-package-json
 
 ## Configuration
 
-.conventional.config.json
+conventional.config.json
 
 ```json
 {
