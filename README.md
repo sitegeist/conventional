@@ -1,21 +1,22 @@
 # @sitegeist/conventional
 
-Frontend toolchain for sitegeist TYPO3 projects
+Bundles sitegeist's frontend toolchain for TYPO3 projects (with and without [fluid-components](https://github.com/sitegeist/fluid-components))
 
 ## Features
 
-* Bundles sitegeist's frontend toolchain for TYPO3 projects (with and without fluid components)
 * Enables centralized design tokens in a json/json5 file which can be used in sass files,
  javascript as well as TYPO3 and fluid components
 * Easy imports of multiple sass/js files via glob
-* Autoprefixing of new CSS properties for older browsers (respects browserslist of project)
 * Automatic polyfills for new JavaScript features with babel (respects browserslist of project)
 * Minifies frontend assets and generates source map files
 
 ### Planned features
 
+* Autoprefixing of modern CSS properties for older browsers (respects browserslist of project)
 * Autoprefixing of CSS classes (similar to CSS modules) for selected sass files
 * Builds SVG sprites from folders of individual svg files
+* Support for glob in conventional.config.json
+* Integrated linting toolchain for SASS and JS files
 
 ## Usage
 
@@ -23,25 +24,16 @@ Frontend toolchain for sitegeist TYPO3 projects
 npx @sitegeist/conventional init
 ```
 
-* Creates default `.conventional.config.json`
-* Creates default `.browserslistrc`
-* Creates `package.json` (if it already exists, it provides instructions to change it => https://www.npmjs.com/package/diff)
-   * requires conventional
-   * registers commands (build, watch...)
-* Optionally creates `webpack.config.js` (if it already exists, it provides instructions to change it => https://www.npmjs.com/package/diff)
-   * reads input/output and settings from conventional configuration file
-   * provides method to obtain current prefix
+* Outputs instructions to install conventional
+* Creates default `conventional.config.json`
 
-### package.json
-
-https://github.com/npm/init-package-json
+After the setup procedure, your package.json should look something like this:
 
 ```json
 {
    "scripts": {
        "build": "conventional build",
-       "watch": "conventional watch",
-       "lint": "conventional lint"
+       "watch": "conventional watch"
    },
    "devDependencies": {
        "@sitegeist/conventional": "^1.0"
@@ -51,7 +43,7 @@ https://github.com/npm/init-package-json
 
 ## Configuration
 
-conventional.config.json
+All configuration is done in conventional.config.json in your package root folder:
 
 ```json
 {
@@ -75,6 +67,8 @@ conventional.config.json
     }
 }
 ```
+
+see also [conventional.config.json](./lib/templates/conventional.config.json)
 
 ## Available Commands
 
