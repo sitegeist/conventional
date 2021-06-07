@@ -1,0 +1,18 @@
+{
+    "minify": true,
+    "sourceMaps": true,
+    "sass": {
+        "inputFiles": {
+            "Main": "./Resources/Private/Sass/Main.scss"
+        },
+        "outputPath": "./Resources/Public/Css/",
+        "outputFilePattern": "[name].min.css"
+    },
+    "js": {
+        "inputFiles": {
+            "Main": "./Resources/Private/JavaScript/Main.js"
+        },
+        "outputPath": "./Resources/Public/JavaScript/",
+        "outputFilePattern": "[name].min.js"
+    }
+}
