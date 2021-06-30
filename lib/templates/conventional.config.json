@@ -1,5 +1,6 @@
 {
     "minify": true,
+    "autoprefixer": true,
     "sourceMaps": true,
     "sass": {
         "inputFiles": {
