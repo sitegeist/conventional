@@ -43,6 +43,7 @@
   },
   "devDependencies": {
     "node": "^12",
-    "standard": "*"
+    "standard": "^16.0.3",
+    "standard-loader": "^7.0.0"
   }
 }
