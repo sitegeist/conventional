@@ -11,13 +11,12 @@ Bundles sitegeist's frontend toolchain for TYPO3 projects (with and without [flu
 * Minifies frontend assets and generates source map files
 * Browser Update Note
 * Stylelint for (CSS, SASS, SCSS) and Standard Linting (JS)
+* Autoprefixing of modern CSS properties for older browsers (respects browserslist of project)
 
 ### Planned features
 
-* Autoprefixing of modern CSS properties for older browsers (respects browserslist of project)
 * Autoprefixing of CSS classes (similar to CSS modules) for selected sass files
 * Builds SVG sprites from folders of individual svg files
-* Support for glob in conventional.config.json
 * Integrated linting toolchain for SASS and JS files
 
 ## Usage
@@ -51,6 +50,7 @@ All configuration is done in conventional.config.json in your package root folde
 {
     "minify": true,
     "sourceMaps": true,
+    "autoprefixer": true,
     "sass": {
         "inputFiles": {
             "Main": "./Resources/Private/Sass/Main.scss",
