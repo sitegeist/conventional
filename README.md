@@ -9,6 +9,8 @@ Bundles sitegeist's frontend toolchain for TYPO3 projects (with and without [flu
 * Easy imports of multiple sass/js files via glob
 * Automatic polyfills for new JavaScript features with babel (respects browserslist of project)
 * Minifies frontend assets and generates source map files
+* Browser Update Note
+* Stylelint for (CSS, SASS, SCSS) and Standard Linting (JS)
 * Autoprefixing of modern CSS properties for older browsers (respects browserslist of project)
 
 ### Planned features
@@ -82,15 +84,15 @@ conventional build:js
 conventional watch
 conventional watch:sass
 conventional watch:js
+
+conventional lint
+conventional lint:sass
+conventional lint:js
 ```
 
 ### Planned commands
 
 ```
-conventional lint
-conventional lint:sass
-conventional lint:js
-
 conventional test
 conventional test:css
 conventional test:js
