@@ -16,5 +16,5 @@
         "outputPath": "./Resources/Public/JavaScript/",
         "outputFilePattern": "[name].min.js"
     },
-    "browserUpdateNote": true
+    "browserUpdateNote": false
 }
