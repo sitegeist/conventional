@@ -16,5 +16,11 @@
         "outputPath": "./Resources/Public/JavaScript/",
         "outputFilePattern": "[name].min.js"
     },
-    "browserUpdateNote": false
+    "browserUpdateNote": false,
+    "spritemap": {
+        "prefix": "test-",
+        "inputPath": "./Resources/Public/Images/SVG-icons/**/*.svg",
+        "outputPath": "./Resources/Public/Images/",
+        "outputFileName": "test-spritemap.svg"
+    }
 }
