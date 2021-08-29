@@ -2,7 +2,9 @@
     "minify": true,
     "autoprefixer": true,
     "sourceMaps": true,
+    "browserUpdateNote": false,
     "sass": {
+        "enabled": true,
         "inputFiles": {
             "Main": "./Resources/Private/Sass/Main.scss"
         },
@@ -10,17 +12,18 @@
         "outputFilePattern": "[name].min.css"
     },
     "js": {
+        "enabled": true,
         "inputFiles": {
             "Main": "./Resources/Private/JavaScript/Main.js"
         },
         "outputPath": "./Resources/Public/JavaScript/",
         "outputFilePattern": "[name].min.js"
     },
-    "browserUpdateNote": false,
     "spritemap": {
-        "prefix": "test-",
-        "inputPath": "./Resources/Public/Images/SVG-icons/**/*.svg",
+        "enabled": true,
+        "prefix": "",
+        "inputFiles": "./Resources/Public/Images/SVG-icons/**/*.svg",
         "outputPath": "./Resources/Public/Images/",
-        "outputFileName": "test-spritemap.svg"
+        "outputFileName": "svg-spritemap.svg"
     }
 }
