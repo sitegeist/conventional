@@ -4,7 +4,6 @@
     "sourceMaps": true,
     "browserUpdateNote": false,
     "sass": {
-        "enabled": true,
         "inputFiles": {
             "Main": "./Resources/Private/Sass/Main.scss"
         },
@@ -12,7 +11,6 @@
         "outputFilePattern": "[name].min.css"
     },
     "js": {
-        "enabled": true,
         "inputFiles": {
             "Main": "./Resources/Private/JavaScript/Main.js"
         },
@@ -20,7 +18,6 @@
         "outputFilePattern": "[name].min.js"
     },
     "spritemap": {
-        "enabled": true,
         "prefix": "",
         "inputFiles": "./Resources/Public/Images/SVG-icons/**/*.svg",
         "outputPath": "./Resources/Public/Images/",
