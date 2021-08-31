@@ -12,12 +12,11 @@ Bundles sitegeist's frontend toolchain for TYPO3 projects (with and without [flu
 * Browser Update Note
 * Stylelint for (CSS, SASS, SCSS) and Standard Linting (JS)
 * Autoprefixing of modern CSS properties for older browsers (respects browserslist of project)
+* SVG-Spritemap generation from single SVG files, optionally with name-prefixes
 
 ### Planned features
 
 * Autoprefixing of CSS classes (similar to CSS modules) for selected sass files
-* Builds SVG sprites from folders of individual svg files
-* Integrated linting toolchain for SASS and JS files
 
 ## Usage
 
@@ -80,10 +79,12 @@ conventional init
 conventional build
 conventional build:sass
 conventional build:js
+conventional build:spritemap
 
 conventional watch
 conventional watch:sass
 conventional watch:js
+conventional watch:spritemap
 
 conventional lint
 conventional lint:sass
