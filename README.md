@@ -71,6 +71,18 @@ All configuration is done in conventional.config.json in your package root folde
 
 see also [conventional.config.json](./lib/templates/conventional.config.json)
 
+### Stylelint configuration
+By default, conventional uses the stylelint-config-standard. To add your own configuration, place a .stylelintrc.json file into your project root. You can add a complete custom set of rules or extend the standard-rules like this:
+```json
+{
+  "extends": "stylelint-config-standard",
+  "rules": {
+    "indentation": "tab",
+    "number-leading-zero": null
+  }
+}
+```
+
 ## Available Commands
 
 ```

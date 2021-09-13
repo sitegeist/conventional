@@ -21,6 +21,7 @@
     "@babel/core": "^7.8.6",
     "@babel/preset-env": "^7.8.6",
     "autoprefixer": "^10.2.6",
+    "babel-eslint": "^10.1.0",
     "babel-loader": "^8.0.6",
     "browser-update": "^3.3.30",
     "cbt_tunnels": "^1.2.2",
