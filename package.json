@@ -32,7 +32,6 @@
     "json5": "^2.1.1",
     "mini-css-extract-plugin": "^2.4.3",
     "node": "^17.0.1",
-    "node-gyp": "^8.3.0",
     "node-sass": "^6.0.0",
     "node-sass-glob-importer": "^5.3.2",
     "node-sass-json-importer": "git+https://github.com/sitegeist/node-sass-json-importer.git#dev",
@@ -50,5 +49,8 @@
     "svg-spritemap-webpack-plugin": "^4.3.0",
     "webpack": "^5",
     "webpack-remove-empty-scripts": "^0.7.1"
-  }
+  },
+  "resolutions": {
+		"**/node-gyp": "^7.0.0"
+	}
 }
