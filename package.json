@@ -49,8 +49,5 @@
     "svg-spritemap-webpack-plugin": "^4.3.0",
     "webpack": "^5",
     "webpack-remove-empty-scripts": "^0.7.1"
-  },
-  "resolutions": {
-		"**/node-gyp": "^7.0.0"
-	}
+  }
 }
