@@ -33,10 +33,11 @@ After the setup procedure, your package.json should look something like this:
 {
    "scripts": {
        "build": "conventional build",
-       "watch": "conventional watch"
+       "watch": "conventional watch",
+       "lint": "conventional lint"
    },
    "devDependencies": {
-       "@sitegeist/conventional": "^1.0"
+       "@sitegeist/conventional": "^1.4"
    }
 }
 ```
@@ -50,6 +51,7 @@ All configuration is done in conventional.config.json in your package root folde
     "minify": true,
     "sourceMaps": true,
     "autoprefixer": true,
+    "browserUpdateNote": false,
     "sass": {
         "inputFiles": {
             "Main": "./Resources/Private/Sass/Main.scss",
@@ -72,10 +74,10 @@ All configuration is done in conventional.config.json in your package root folde
 see also [conventional.config.json](./lib/templates/conventional.config.json)
 
 ### Stylelint configuration
-By default, conventional uses the stylelint-config-standard. To add your own configuration, place a .stylelintrc.json file into your project root. You can add a complete custom set of rules or extend the standard-rules like this:
+By default, conventional uses the stylelint-config-sass-guidelines. To add your own configuration, place a .stylelintrc.json file into your project root. You can add a complete custom set of rules or extend the standard-rules like this:
 ```json
 {
-  "extends": "stylelint-config-standard",
+  "extends": "stylelint-config-sass-guidelines",
   "rules": {
     "indentation": "tab",
     "number-leading-zero": null
