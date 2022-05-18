@@ -48,7 +48,7 @@ For the usage in an apple environment with M1 CPU or other installation issues a
 
 * webimage_extra_packages: [python-dev, build-essential]
 
-In case you manually added the conventional package to your package.json and you might want to do a 'yarn install' or 'npm install' use this flags for when you got issues with node-sass
+In case you manually added the conventional package to your package.json and you might want to do a 'yarn install' or 'npm install' use this flags when you get issues with node-sass
 
 * CXXFLAGS="--std=c++17" yarn install --network-concurrency 1
 * CXXFLAGS="--std=c++17" npm install --network-concurrency 1
