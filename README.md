@@ -21,17 +21,10 @@ Bundles sitegeist's frontend toolchain for TYPO3 projects (with and without [flu
 ## Usage
 
 ```
-* Step 1: to create the conventional config file via
-
 npx @sitegeist/conventional init
-
-* Step 2:
-yarn add --dev @sitegeist/conventional
-[or]
-npm i --save-dev @sitegeist/conventional
 ```
 
-* Outputs instructions to install conventional
+* Outputs instructions to install conventional via npm or yarn
 * Creates default `conventional.config.json`
 
 After the setup procedure, your package.json should look something like this:
