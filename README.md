@@ -42,16 +42,20 @@ After the setup procedure, your package.json should look something like this:
 }
 ```
 
-## Installation with ddev and CPU
+## Installation with ddev and M1 CPU
 
 For the usage in an apple environment with M1 CPU or other installation issues add these packages to your .ddev/config.yaml
 
-* webimage_extra_packages: [python-dev, build-essential]
+```
+webimage_extra_packages: [python-dev, build-essential]
+```
 
 In case you manually added the conventional package to your package.json and you might want to do a 'yarn install' or 'npm install' use this flags when you get issues with node-sass
 
-* CXXFLAGS="--std=c++17" yarn install --network-concurrency 1
-* CXXFLAGS="--std=c++17" npm install --network-concurrency 1
+```
+CXXFLAGS="--std=c++17" yarn install --network-concurrency 1
+CXXFLAGS="--std=c++17" npm install --network-concurrency 1
+```
 
 ## Configuration
 
