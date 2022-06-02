@@ -3,6 +3,7 @@
     "autoprefixer": true,
     "sourceMaps": true,
     "browserUpdateNote": false,
+    "lighthouseTest": true,
     "sass": {
         "inputFiles": {
             "Main": "./Resources/Private/Sass/Main.scss"

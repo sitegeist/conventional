@@ -47,6 +47,7 @@
     "svg-spritemap-webpack-plugin": "^4.3.0",
     "terser-webpack-plugin": "^5.2.5",
     "webpack": "^5",
+    "webpack-lighthouse-plugin": "^1.0.9",
     "webpack-remove-empty-scripts": "^0.7.1"
   }
 }

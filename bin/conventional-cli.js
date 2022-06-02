@@ -14,7 +14,7 @@ if (['production', 'development'].includes(type)) {
   mode = command[1]
 }
 
-if (!['help', 'init', 'build', 'watch', 'lint', 'browsertest'].includes(action)) {
+if (!['help', 'init', 'build', 'watch', 'lint', 'test', 'browsertest'].includes(action)) {
   console.error(`ERROR: Invalid command ${action}`)
   process.exit(1)
 }
