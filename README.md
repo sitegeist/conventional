@@ -13,6 +13,7 @@ Bundles sitegeist's frontend toolchain for TYPO3 projects (with and without [flu
 * Stylelint for (CSS, SASS, SCSS) and Standard Linting (JS)
 * Autoprefixing of modern CSS properties for older browsers (respects browserslist of project)
 * SVG-Spritemap generation from single SVG files, optionally with name-prefixes
+* Typescript Support
 
 ### Planned features
 
