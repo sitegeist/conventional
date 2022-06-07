@@ -1,6 +1,6 @@
 {
   "name": "@sitegeist/conventional",
-  "version": "1.4.4",
+  "version": "1.5.0",
   "description": "Frontend toolchain for sitegeist TYPO3 projects",
   "keywords": [],
   "license": "MIT",
@@ -47,6 +47,8 @@
     "svg-spritemap-webpack-plugin": "^4.3.0",
     "terser-webpack-plugin": "^5.2.5",
     "webpack": "^5",
-    "webpack-remove-empty-scripts": "^0.7.1"
+    "webpack-remove-empty-scripts": "^0.7.1",
+    "ts-loader": "^9.3.0",
+    "typescript": "^4.7.2"
   }
 }

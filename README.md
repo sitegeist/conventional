@@ -70,7 +70,8 @@ All configuration is done in conventional.config.json in your package root folde
     "sass": {
         "inputFiles": {
             "Main": "./Resources/Private/Sass/Main.scss",
-            "Additional": "./Resources/Private/Sass/Additional.scss"
+            "Additional": "./Resources/Private/Sass/Additional.scss",
+            "Glob": "./Resources/Private/Sass/*.scss"
         },
         "outputPath": "./Resources/Public/Css/",
         "outputFilePattern": "[name].min.css"
@@ -78,7 +79,15 @@ All configuration is done in conventional.config.json in your package root folde
     "js": {
         "inputFiles": {
             "Main": "./Resources/Private/JavaScript/Main.js",
-            "Additional": "./Resources/Private/JavaScript/Additional.js"
+            "Additional": "./Resources/Private/JavaScript/Additional.js",
+            "Glob": "./Resources/Private/JavaScript/*.js"
+        },
+        "outputPath": "./Resources/Public/JavaScript/",
+        "outputFilePattern": "[name].min.js"
+    },
+    "ts": {
+        "inputFiles": {
+            "MainFromTs": "./Resources/Private/JavaScript/*.ts"
         },
         "outputPath": "./Resources/Public/JavaScript/",
         "outputFilePattern": "[name].min.js"
@@ -100,6 +109,21 @@ By default, conventional uses the stylelint-config-sass-guidelines. To add your 
 }
 ```
 
+### TypeScript configuration
+To configure the TypeScript settings, a tsconfig.json can be placed in your project root. A sample setting could look like this:
+```json
+{
+    "compilerOptions": {
+        "noImplicitAny": true,
+        "module": "es6",
+        "target": "es5",
+        "jsx": "react",
+        "allowJs": true,
+        "moduleResolution": "node"
+    }
+}
+```
+
 ## Available Commands
 
 ```
@@ -108,11 +132,13 @@ conventional init
 conventional build
 conventional build:sass
 conventional build:js
+conventional build:ts
 conventional build:spritemap
 
 conventional watch
 conventional watch:sass
 conventional watch:js
+conventional watch:ts
 conventional watch:spritemap
 
 conventional lint
