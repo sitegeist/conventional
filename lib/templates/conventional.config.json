@@ -18,6 +18,13 @@
         "outputPath": "./Resources/Public/JavaScript/",
         "outputFilePattern": "[name].min.js"
     },
+    "ts": {
+        "inputFiles": {
+            "MainFromTs": "./Resources/Private/JavaScript/*.ts"
+        },
+        "outputPath": "./Resources/Public/JavaScript/",
+        "outputFilePattern": "[name].min.js"
+    },
     "spritemap": {
         "prefix": "",
         "inputFiles": "./Resources/Public/Images/SVG-icons/**/*.svg",
