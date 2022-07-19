@@ -1596,10 +1596,10 @@ ansi-styles@^4.0.0, ansi-styles@^4.1.0:
   dependencies:
     color-convert "^2.0.1"
 
-ansis@^1.3.4:
-  version "1.3.6"
-  resolved "https://registry.yarnpkg.com/ansis/-/ansis-1.3.6.tgz#5370d9cc7b20d054967cc003cf051c2acf395b2c"
-  integrity sha512-TMXlWGGK5cOYT//DNX8V4zGnr824j95Oh888GV2J3eVFwKnolgdym9jje9MNLa3a8YNl0MnyX7C5tVj8dw5amA==
+ansis@^1.3.6:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/ansis/-/ansis-1.4.0.tgz#fae2b44b6478be748a5f5e67f185cd9bb885a145"
+  integrity sha512-jaJCg2/68pwinZeW86YBSNv0kNPr3PSog/IqflOVCbqCedSCvrDCBUW1y4V9gcEUDNxrGtVLAkMIivvpsq1VwA==
 
 "aproba@^1.0.3 || ^2.0.0":
   version "2.0.0"
@@ -7447,10 +7447,10 @@ svg-sprite-loader@^6.0.9:
     svg-baker-runtime "^1.4.7"
     url-slug "2.0.0"
 
-svg-spritemap-webpack-plugin@^4.4.2:
-  version "4.4.2"
-  resolved "https://registry.yarnpkg.com/svg-spritemap-webpack-plugin/-/svg-spritemap-webpack-plugin-4.4.2.tgz#422e43aca568a3d0939aea249107b9d1c265bb52"
-  integrity sha512-+o6bHsUhORDjU/kc05kdBhNBPxsOUHVk5N22N6PufM+7AqgY+0h1nfktWZXWLJHTr1/s9AKIZvok4woZgRNtjg==
+svg-spritemap-webpack-plugin@^4.5.0:
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/svg-spritemap-webpack-plugin/-/svg-spritemap-webpack-plugin-4.5.0.tgz#3281edd1ec65daf1e5f6153f1628af853407baa1"
+  integrity sha512-ee1k1ZCEbWIOq4pPv9fWTqIhsdPfmzHPXupyqSzoIhsVumvhyNYkN0GIW9gtLsuQUvLt+7GHRhwMMwbVVAbS5w==
   dependencies:
     "@xmldom/xmldom" "^0.8.2"
     glob "^8.0.3"
@@ -7934,12 +7934,12 @@ webpack-merge@^5.8.0:
     clone-deep "^4.0.1"
     wildcard "^2.0.0"
 
-webpack-remove-empty-scripts@^0.7.1:
-  version "0.7.3"
-  resolved "https://registry.yarnpkg.com/webpack-remove-empty-scripts/-/webpack-remove-empty-scripts-0.7.3.tgz#f57b9823f5bd7016b44a4990f9257defd018513d"
-  integrity sha512-yipqb25A0qtH7X9vKt6yihwyYkTtSlRiDdBb2QsyrkqGM3hpfAcfOO1lYDef9HQUNm3s8ojmorbNg32XXX6FYg==
+webpack-remove-empty-scripts@^0.8.1:
+  version "0.8.1"
+  resolved "https://registry.yarnpkg.com/webpack-remove-empty-scripts/-/webpack-remove-empty-scripts-0.8.1.tgz#65cbad32fe8706cd139825261df4842ad0c89218"
+  integrity sha512-61hc2jfZOI6SAFDpIAQ910VFWc7ic+JWyjU0H/5A+1poKD9nOQRHnXaaixwsxXWI0+N1HUvmiREC3h9Dqn9xWw==
   dependencies:
-    ansis "^1.3.4"
+    ansis "^1.3.6"
 
 webpack-sources@^3.2.3:
   version "3.2.3"
