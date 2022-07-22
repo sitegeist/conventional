@@ -14,7 +14,7 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
           # Defaults to the user or organization that owns the workflow file
           scope: '@sitegeist'
-      - run: CXXFLAGS="--std=c++17" yarn install --network-concurrency 1 --ignore-engines
+      - run: yarn install --network-concurrency 1
       - run: yarn publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
