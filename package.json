@@ -38,7 +38,7 @@
     "postcss-loader": "^6",
     "remove-files-webpack-plugin": "^1",
     "sass-loader": "^12",
-    "standard": "^17",
+    "standard": "^16",
     "standard-loader": "^7",
     "stylelint": "^14",
     "stylelint-config-sass-guidelines": "^9",
