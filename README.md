@@ -77,11 +77,11 @@ All configuration is done in conventional.config.json in your package root folde
         "outputPath": "./Resources/Public/Css/",
         "outputFilePattern": "[name].min.css",
         "purgeFiles": [
-			"./Resources/Private/Components/**/*.html",
-			"./Resources/Private/Templates/**/*.html",
-			"./Resources/Private/JavaScript/**/*.js"
-		],
-		"purgeSafelist": ["html", "body"]
+            "./Resources/Private/Components/**/*.html",
+            "./Resources/Private/Templates/**/*.html",
+            "./Resources/Private/JavaScript/**/*.js"
+        ],
+        "purgeSafelist": ["html", "body"]
     },
     "js": {
         "inputFiles": {
