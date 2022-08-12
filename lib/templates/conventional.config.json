@@ -13,7 +13,8 @@
 			"./Resources/Private/Components/**/*.html",
 			"./Resources/Private/Templates/**/*.html",
 			"./Resources/Private/JavaScript/**/*.js"
-		]
+		],
+		"purgeSafelist": ["html", "body"]
     },
     "js": {
         "inputFiles": {

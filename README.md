@@ -80,7 +80,8 @@ All configuration is done in conventional.config.json in your package root folde
 			"./Resources/Private/Components/**/*.html",
 			"./Resources/Private/Templates/**/*.html",
 			"./Resources/Private/JavaScript/**/*.js"
-		]
+		],
+		"purgeSafelist": ["html", "body"]
     },
     "js": {
         "inputFiles": {
@@ -132,6 +133,7 @@ To configure the TypeScript settings, a tsconfig.json can be placed in your proj
 
 ### purgeCSS
 To run purgeCSS on your sass files, add purgeFiles (path or array of paths incl. glob) to the sass section of your conventional.config.json. Only classes/IDs used in those files will be kept in your output CSS. Note: Enabling this option may reduce the building speed significantly, depending on the size of your project.
+purgeSafelist can take the different safelist patterns as described here: https://purgecss.com/configuration.html. It just needs to be converted to .json formatting.
 
 ## Available Commands
 
