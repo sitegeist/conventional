@@ -8,7 +8,13 @@
             "Main": "./Resources/Private/Sass/Main.scss"
         },
         "outputPath": "./Resources/Public/Css/",
-        "outputFilePattern": "[name].min.css"
+        "outputFilePattern": "[name].min.css",
+        "purgeFiles": [
+            "./Resources/Private/Components/**/*.html",
+            "./Resources/Private/Templates/**/*.html",
+            "./Resources/Private/JavaScript/**/*.js"
+        ],
+        "purgeSafelist": ["html", "body"]
     },
     "js": {
         "inputFiles": {

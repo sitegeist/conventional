@@ -13,6 +13,7 @@ Bundles sitegeist's frontend toolchain for TYPO3 projects (with and without [flu
 * Stylelint for (CSS, SASS, SCSS) and Standard Linting (JS)
 * Autoprefixing of modern CSS properties for older browsers (respects browserslist of project)
 * SVG-Spritemap generation from single SVG files, optionally with name-prefixes
+* Integration of purgeCSS functionality
 
 ### Planned features
 
@@ -74,7 +75,13 @@ All configuration is done in conventional.config.json in your package root folde
             "Glob": "./Resources/Private/Sass/*.scss"
         },
         "outputPath": "./Resources/Public/Css/",
-        "outputFilePattern": "[name].min.css"
+        "outputFilePattern": "[name].min.css",
+        "purgeFiles": [
+            "./Resources/Private/Components/**/*.html",
+            "./Resources/Private/Templates/**/*.html",
+            "./Resources/Private/JavaScript/**/*.js"
+        ],
+        "purgeSafelist": ["html", "body"]
     },
     "js": {
         "inputFiles": {
@@ -123,6 +130,10 @@ To configure the TypeScript settings, a tsconfig.json can be placed in your proj
     }
 }
 ```
+
+### purgeCSS
+To run purgeCSS on your sass files, add purgeFiles (path or array of paths incl. glob) to the sass section of your conventional.config.json. Only classes/IDs used in those files will be kept in your output CSS. Note: Enabling this option may reduce the building speed significantly, depending on the size of your project.
+purgeSafelist can take the different safelist patterns as described here: https://purgecss.com/configuration.html. It just needs to be converted to .json formatting.
 
 ## Available Commands
 
