@@ -16,6 +16,13 @@
         ],
         "purgeSafelist": ["html", "body"]
     },
+    "less": {
+        "inputFiles": {
+            "Main": "./Resources/Private/Less/Main.less"
+        },
+        "outputPath": "./Resources/Public/Css/",
+        "outputFilePattern": "[name].min.css"
+    },
     "js": {
         "inputFiles": {
             "Main": "./Resources/Private/JavaScript/Main.js"
