@@ -83,6 +83,13 @@ All configuration is done in conventional.config.json in your package root folde
         ],
         "purgeSafelist": ["html", "body"]
     },
+    "less": {
+        "inputFiles": {
+            "Main": "./Resources/Private/Less/Main.less"
+        },
+        "outputPath": "./Resources/Public/Css/",
+        "outputFilePattern": "[name].min.css"
+    },
     "js": {
         "inputFiles": {
             "Main": "./Resources/Private/JavaScript/Main.js",
@@ -142,12 +149,14 @@ conventional init
 
 conventional build
 conventional build:sass
+conventional build:less
 conventional build:js
 conventional build:ts
 conventional build:spritemap
 
 conventional watch
 conventional watch:sass
+conventional watch:less
 conventional watch:js
 conventional watch:ts
 conventional watch:spritemap
