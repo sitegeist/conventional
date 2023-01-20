@@ -14,7 +14,7 @@ if (['production', 'development'].includes(type)) {
   mode = command[1]
 }
 
-if (!['help', 'init', 'build', 'watch', 'lint', 'browsertest'].includes(action)) {
+if (!['help', 'init', 'build', 'watch', 'lint'].includes(action)) {
   console.error(`ERROR: Invalid command ${action}`)
   process.exit(1)
 }
@@ -26,9 +26,6 @@ if (!fs.existsSync(workingDir) || !fs.lstatSync(workingDir).isDirectory()) {
   console.error('ERROR: The specified path does not exist or is not a directory.')
   process.exit(1)
 }
-
-// Fetch .env file
-require('dotenv').config({ path: path.resolve(workingDir, '.env') })
 
 // Read config file
 const configFile = path.resolve(workingDir, 'conventional.config.json')
