@@ -18,7 +18,7 @@ jobs:
           scope: '@sitegeist'
       # check if cache really needs cleaning
       - run: yarn cache clean --all
-      - run: yarn install --legacy-peer-deps --network-concurrency 1
+      - run: yarn install --network-concurrency 1
       - run: yarn publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
