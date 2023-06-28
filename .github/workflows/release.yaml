@@ -17,6 +17,7 @@ jobs:
           # Defaults to the user or organization that owns the workflow file
           scope: '@sitegeist'
       - run: yarn cache clean --all
+      - run: rm -rf /home/runner/.cache/yarn/v6/
       - run: yarn install --force --network-concurrency 1
       - run: yarn publish --access public
         env:
