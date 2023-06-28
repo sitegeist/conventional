@@ -4274,8 +4274,9 @@ node-sass-magic-importer@^5.3.2:
     postcss-scss "^2.0.0"
     resolve "^1.10.1"
 
-"node-sass@file:dependency-stub":
+"node-sass@git+https://github.com/sitegeist/node-sass-mockup.git":
   version "4.0.0"
+  resolved "git+https://github.com/sitegeist/node-sass-mockup.git#9d92b3f434ba2fce0bcbd993de9935ad11472eca"
 
 normalize-package-data@^2.3.2, normalize-package-data@^2.5.0:
   version "2.5.0"
