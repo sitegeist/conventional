@@ -1,6 +1,6 @@
 {
   "name": "@sitegeist/conventional",
-  "version": "1.8.5",
+  "version": "1.8.6",
   "description": "Frontend toolchain for sitegeist TYPO3 projects",
   "keywords": [],
   "license": "MIT",
