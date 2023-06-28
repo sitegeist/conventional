@@ -7,19 +7,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-python@v4
-        with:
-          python-version: '3.10'
       # Setup .npmrc file to publish to npm
       - uses: actions/setup-node@v3
         with:
           node-version: 16
           cache: 'yarn'
+          cache-dependency-path: 'yarn.lock'
           registry-url: 'https://registry.npmjs.org'
           # Defaults to the user or organization that owns the workflow file
           scope: '@sitegeist'
       - run: yarn cache clean --all
-      - run: yarn install --network-concurrency 1
+      - run: yarn install --force --network-concurrency 1
       - run: yarn publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
