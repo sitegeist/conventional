@@ -18,6 +18,7 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
           # Defaults to the user or organization that owns the workflow file
           scope: '@sitegeist'
+      - run: yarn cache clean --all
       - run: yarn install --network-concurrency 1
       - run: yarn publish --access public
         env:
